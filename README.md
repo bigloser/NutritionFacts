@@ -1,6 +1,6 @@
-# NutritionFacts Live Q&A Browser
-
 ![](https://nutritionfacts.z2systems.com/neon/resource/nutritionfacts/templateImage/logoImage_41.png?r=5253053473016674)
+
+# NutritionFacts Live Q&A Browser
 
 ## Introduction 
 
