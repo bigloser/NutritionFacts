@@ -7,7 +7,7 @@ import streamlit as st
 from youtube_transcript_api import YouTubeTranscriptApi
 from googleapiclient.discovery import build
 
-api_key = 'AIzaSyC1hwkrmvk10XgATCsaBxXPBx5PvZgmP1g'
+api_key = st.secrets['api_key']
 
 
 @st.cache
