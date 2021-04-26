@@ -14,7 +14,7 @@ Sometimes you don't have time to watch 5 to 10 minutes of video to find answers 
 
 NutritionFacts Live Q&As are typically quick fire style, great for those moments.
 
-Unfortunately they are hard to search because there aren't transcribed anywhere.
+Unfortunately they are hard to search because they aren't transcribed anywhere.
 
 This tool will allow you to find your answer in seconds. ⌚
 
