@@ -10,9 +10,10 @@ They provide a lot of free material such as videos, webinars, articles and month
 
 ## Problem trying to address
 
-Sometimes you don't have time to watch 5 to 10 minutes of video to find an answer to a question you might have on nutrition.
+Sometimes you don't have time to watch 5 to 10 minutes of video to find answers to your nutrition questions.
 
-Q&A are typically quick fire style, great for those moments.
+Q&A are typically quick fire style, great for those moments. \
+Unfortunately they are hard to index because there aren't transcribed anywhere 
 
 This tool will allow you to find your answer in seconds.
 
