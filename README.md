@@ -10,12 +10,11 @@ They provide a lot of free material such as videos, webinars, articles and month
 
 ## Problem trying to address
 
-While the best source for a review of a certain topic is definetely the video section,\
-some questions asked on the Live Q&As are not addressed previously.
+Sometimes you don't have time to watch 5 to 10 minutes of video to find an answer to a question you might have on nutrition.
 
-Although most if not all videos on the platform are transcribed, the Live Q&As are not.
+Q&A are typically quick fire style, great for those moments.
 
-This tool will allow you to quickly search all Live Q&A for a specific term or nutrient question.
+This tool will allow you to find your answer in seconds.
 
 ## Instructions
 
