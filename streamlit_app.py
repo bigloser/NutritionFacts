@@ -9,7 +9,7 @@ import datetime
 
 session_state = SessionState.get(
         session='',
-        last_time=datetime.datetime(0, 0, 0))
+        last_time=datetime.datetime.now())
 
 st.title('NutritionFacts.Org Live Q&A Browser')
 
