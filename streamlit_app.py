@@ -4,9 +4,12 @@ import streamlit as st
 import utils
 import streamlit_analytics
 import SessionState
+import datetime
 
 
-session_state = SessionState.get(session='', last_time=None)
+session_state = SessionState.get(
+        session='',
+        last_time=datetime.datetime(0, 0, 0))
 
 st.title('NutritionFacts.Org Live Q&A Browser')
 
