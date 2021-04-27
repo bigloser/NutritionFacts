@@ -5,8 +5,6 @@ import utils
 import streamlit_analytics
 
 
-session_state = streamlit_analytics.session_state.get(session=False)
-
 st.title('NutritionFacts.Org Live Q&A Browser')
 
 st.markdown(
@@ -21,9 +19,7 @@ st.markdown(
 with open('file.pkl', 'rb') as saved_file:
     saved_file_data = pickle.load(saved_file)
 
-if not session_state.session:
-    saved_file_data = utils.check_new_videos(saved_file_data)
-    session_state.session = True
+saved_file_data = utils.check_new_videos(saved_file_data)
 
 streamlit_analytics.start_tracking()
 query = st.text_input('Enter your search term', '')
