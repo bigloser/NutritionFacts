@@ -6,7 +6,7 @@ import streamlit_analytics
 import SessionState
 
 
-session_state = SessionState.get(session='', last_time='')
+session_state = SessionState.get(session='', last_time=None)
 
 st.title('NutritionFacts.Org Live Q&A Browser')
 
