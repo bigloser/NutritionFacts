@@ -3,10 +3,15 @@ import re
 import streamlit as st
 import utils
 import streamlit_analytics
+import SessionState
+import datetime
 
 
-session_state = streamlit_analytics.get_session_state(
-        session='')
+session_state = SessionState.get(
+        session='',
+        last_time=datetime.datetime.now(),
+        user_tracked=False,
+        state_dict={})
 
 st.title('NutritionFacts.Org Live Q&A Browser')
 
