@@ -8,7 +8,6 @@ import streamlit_analytics
 
 session_state = SessionState.get(session='')
 
-streamlit_analytics.start_tracking()
 st.title('NutritionFacts.Org Live Q&A Browser')
 
 st.markdown(
@@ -27,9 +26,11 @@ if not session_state.session:
     saved_file_data = utils.check_new_videos(saved_file_data)
     session_state.session = True
 
+streamlit_analytics.start_tracking()
 query = st.text_input('Enter your search term', '')
 if len(query) < 1:
     st.stop()
+streamlit_analytics.stop_tracking()
 
 search_results = {}
 n = 0
@@ -66,5 +67,3 @@ for k, v in search_results.items():
             st.video(v['link'], start_time=int(v['occurrences'][occurrence]))
         else:
             st.video(v['link'], start_time=int(v['occurrences'][0]))
-
-streamlit_analytics.stop_tracking()
