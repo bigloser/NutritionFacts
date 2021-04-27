@@ -21,11 +21,10 @@ with open('file.pkl', 'rb') as saved_file:
 
 saved_file_data = utils.check_new_videos(saved_file_data)
 
-streamlit_analytics.start_tracking()
-query = st.text_input('Enter your search term', '')
-if len(query) < 1:
-    st.stop()
-streamlit_analytics.stop_tracking()
+with streamlit_analytics.track():
+    query = st.text_input('Enter your search term', '')
+    if len(query) < 1:
+        st.stop()
 
 search_results = {}
 n = 0
