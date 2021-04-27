@@ -1,9 +1,11 @@
 import pickle
 import re
 import streamlit as st
-import utils
-import streamlit_analytics
 import SessionState
+import utils
+
+
+session_state = SessionState.get(session='')
 
 
 st.title('NutritionFacts.Org Live Q&A Browser')
@@ -20,17 +22,13 @@ st.markdown(
 with open('file.pkl', 'rb') as saved_file:
     saved_file_data = pickle.load(saved_file)
 
-session = SessionState.get(session=False)
+if not session_state.session:
+    saved_file_data = utils.check_new_videos(saved_file_data)
+    session_state.session = True
 
-st.write(session)
-# if not session.session:
-    # saved_file_data = utils.check_new_videos(saved_file_data)
-    # session.session = True
-
-with streamlit_analytics.track():
-    query = st.text_input('Enter your search term', '')
-    if len(query) < 1:
-        st.stop()
+query = st.text_input('Enter your search term', '')
+if len(query) < 1:
+    st.stop()
 
 search_results = {}
 n = 0
@@ -67,3 +65,5 @@ for k, v in search_results.items():
             st.video(v['link'], start_time=int(v['occurrences'][occurrence]))
         else:
             st.video(v['link'], start_time=int(v['occurrences'][0]))
+
+
