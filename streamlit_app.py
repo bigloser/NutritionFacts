@@ -1,12 +1,11 @@
 import pickle
 import re
 import streamlit as st
-import SessionState
 import utils
 import streamlit_analytics
 
 
-session_state = SessionState.get(session='')
+session_state = streamlit_analytics.sess.get(session='')
 
 st.title('NutritionFacts.Org Live Q&A Browser')
 
