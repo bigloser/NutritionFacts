@@ -4,13 +4,13 @@
 
 ## Introduction 
 
-[NutritionFacts.Org](https://nutritionfacts.org/) is one of the world's leading sources for scientific data on Nutrition and Health. 
+[NutritionFacts.Org](https://nutritionfacts.org/) is one of the leading sources for scientific data on Nutrition and Health. 
 
-They provide a lot of material such as videos, webinars, articles, books and monthly Live Q&As.
+They provide a lot of free material such as videos, webinars, articles and monthly Live Q&As.
 
 ## Problem trying to address
 
-Sometimes you don't have time to watch 5 to 10 minutes of video or read a book to find answers to your nutrition questions.
+Sometimes you don't have time to watch 5 to 10 minutes of video to find answers to your nutrition questions.
 
 NutritionFacts Live Q&As are typically quick fire style, great for those moments.
 
