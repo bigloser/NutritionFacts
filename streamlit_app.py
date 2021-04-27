@@ -19,7 +19,11 @@ st.markdown(
 with open('file.pkl', 'rb') as saved_file:
     saved_file_data = pickle.load(saved_file)
 
-saved_file_data = utils.check_new_videos(saved_file_data)
+session = streamlit_analytics.session_state.get(session=False)
+
+if not session.session:
+    saved_file_data = utils.check_new_videos(saved_file_data)
+    session.session = True
 
 with streamlit_analytics.track():
     query = st.text_input('Enter your search term', '')
