@@ -3,10 +3,15 @@ import re
 import streamlit as st
 import SessionState
 import utils
+import json
+from google.oauth2 import service_account
+from google.cloud import firestore
 
+key_dict = json.loads(st.secrets["textkey"])
+creds = service_account.Credentials.from_service_account_info(key_dict)
+db = firestore.Client(credentials=creds)
 
 session_state = SessionState.get(session='')
-
 
 st.title('NutritionFacts.Org Live Q&A Browser')
 
@@ -29,6 +34,15 @@ if not session_state.session:
 query = st.text_input('Enter your search term', '')
 if len(query) < 1:
     st.stop()
+doc_ref = db.collection("query").document(query)
+doc = doc_ref.get()
+if doc.exists:
+    doc_ref.update({'count': firestore.Increment(1)})
+else:
+    doc_ref.set({
+        "query": query,
+        "count": 1
+    })
 
 search_results = {}
 n = 0
@@ -65,5 +79,3 @@ for k, v in search_results.items():
             st.video(v['link'], start_time=int(v['occurrences'][occurrence]))
         else:
             st.video(v['link'], start_time=int(v['occurrences'][0]))
-
-
