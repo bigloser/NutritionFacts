@@ -3,11 +3,12 @@ import re
 import streamlit as st
 import SessionState
 import utils
+import streamlit_analytics
 
 
 session_state = SessionState.get(session='')
 
-
+streamlit_analytics.start_tracking()
 st.title('NutritionFacts.Org Live Q&A Browser')
 
 st.markdown(
@@ -66,4 +67,4 @@ for k, v in search_results.items():
         else:
             st.video(v['link'], start_time=int(v['occurrences'][0]))
 
-
+streamlit_analytics.stop_tracking()
