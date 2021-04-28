@@ -13,10 +13,11 @@ db = firestore.Client(credentials=creds)
 
 session_state = SessionState.get(session='')
 
-st.title('NutritionFacts.Org Live Q&A Browser')
-
 st.markdown(
         """
+        # NutritionFacts.Org Live Q&A Browser
+
+
         This tool allows for a quick search for a specific term\
         on all Live Q&As ever recorded.
 
@@ -79,3 +80,33 @@ for k, v in search_results.items():
             st.video(v['link'], start_time=int(v['occurrences'][occurrence]))
         else:
             st.video(v['link'], start_time=int(v['occurrences'][0]))
+
+footer="""<style>
+a:link , a:visited{
+color: blue;
+background-color: transparent;
+text-decoration: underline;
+}
+
+a:hover,  a:active {
+color: red;
+background-color: transparent;
+text-decoration: underline;
+}
+
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: white;
+color: black;
+text-align: center;
+}
+</style>
+<div class="footer">
+<p>Enjoying ❤ it? </p>
+<p> Bookmark so you can come back anytime </p>
+</div>
+"""
+st.markdown(footer,unsafe_allow_html=True)
