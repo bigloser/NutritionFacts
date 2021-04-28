@@ -80,10 +80,9 @@ for k, v in search_results.items():
         else:
             st.video(v['link'], start_time=int(v['occurrences'][0]))
 
-footer="""
-<style>
+footer="""<style>
 .footer {
-position: fixed;
+position: static;
 left: 0;
 bottom: 0;
 width: 100%;
@@ -93,8 +92,8 @@ text-align: center;
 }
 </style>
 <div class="footer">
-<p>Enjoying ❤ it? </p>
-<p> Bookmark so you can come back anytime </p>
+<p> Enjoying ❤ it? </p>
+<p> Bookmark and come back anytime &#127793;</p>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
