@@ -16,8 +16,7 @@ session_state = SessionState.get(session='')
 st.markdown(
         """
         # NutritionFacts.Org Live Q&A Browser
-
-
+        ---
         This tool allows for a quick search for a specific term\
         on all Live Q&As ever recorded.
 
