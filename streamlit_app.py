@@ -80,19 +80,8 @@ for k, v in search_results.items():
         else:
             st.video(v['link'], start_time=int(v['occurrences'][0]))
 
-footer="""<style>
-a:link , a:visited{
-color: blue;
-background-color: transparent;
-text-decoration: underline;
-}
-
-a:hover,  a:active {
-color: red;
-background-color: transparent;
-text-decoration: underline;
-}
-
+footer="""
+<style>
 .footer {
 position: fixed;
 left: 0;
